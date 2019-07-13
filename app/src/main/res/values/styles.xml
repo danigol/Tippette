@@ -9,7 +9,7 @@
     </style>
 
     <style name="questionStyle">
-        <item name="android:textColor">@color/darkGray</item>
+        <item name="android:textColor">@color/white</item>
         <item name="android:textSize">32sp</item>
         <item name="android:textAlignment">center</item>
         <item name="android:layout_marginStart">16dp</item>
@@ -24,6 +24,7 @@
         <item name="android:layout_marginStart">24dp</item>
         <item name="android:layout_marginEnd">24dp</item>
         <item name="android:layout_marginTop">96dp</item>
+        <item name="android:backgroundTint">@color/moneyGreen</item>
     </style>
 
     <style name="nextButtonStyle">
