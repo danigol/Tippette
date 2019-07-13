@@ -17,4 +17,13 @@
         <item name="android:layout_marginEnd">16dp</item>
     </style>
 
+    <style name="textAnswerStyle">
+        <item name="android:textColor">@color/moneyGreen</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginTop">96dp</item>
+    </style>
+
 </resources>

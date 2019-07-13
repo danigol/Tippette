@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Tippette</string>
     <string name="total_question">What was the total?</string>
+    <string name="total_tooltip">The total amount for the meal, with tax.</string>
     <string name="people_paying_question">How many people are paying?</string>
     <string name="service_quality_question">How was the service?</string>
     <string name="service_quality_label_1">Worst Ever!</string>
