@@ -9,4 +9,6 @@
     <string name="service_quality_label_3">It Was OK.</string>
     <string name="service_quality_label_4">Pretty Good.</string>
     <string name="service_quality_label_5">Best Ever!</string>
+    <string name="next">Next</string>
+    <string name="finish">Let\'s Go!</string>
 </resources>
