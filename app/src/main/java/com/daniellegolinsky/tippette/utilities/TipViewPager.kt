@@ -18,4 +18,5 @@ class TipViewPager constructor(context: Context, attributeSet: AttributeSet)
     override fun onTouchEvent(ev: MotionEvent?): Boolean {
         return false
     }
+
 }

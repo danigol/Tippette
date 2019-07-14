@@ -29,7 +29,15 @@ class FinalPageFragment : Fragment() {
 
         nextButton = view.findViewById(R.id.next)
         nextButton.setOnClickListener{ onNextClicked() }
+
         return view
+    }
+
+    fun refresh() {
+        finalValue.text = getString(
+                R.string.pay_up_amount,
+                getString(R.string.currency_symbol),
+                TipModel.generateTotal())
     }
 
     private fun onNextClicked() {

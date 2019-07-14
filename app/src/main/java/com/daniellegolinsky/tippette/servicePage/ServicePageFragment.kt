@@ -46,6 +46,7 @@ class ServicePageFragment : Fragment() {
     private fun onNextClicked() {
         TipModel.service = serviceQuality
         TipModel.getNextPage()
+        (activity as SlideScreenActivity).updateFinalPage()
         (activity as SlideScreenActivity).onNext()
     }
 }
