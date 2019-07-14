@@ -6,33 +6,17 @@
     android:background="@color/darkGray">
 
     <TextView
-        android:id="@+id/question"
+        android:id="@+id/total"
         style="@style/questionStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/total_question"
-        app:layout_constraintBottom_toTopOf="@+id/service_cost_entry"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/service_cost_entry"
-        style="@style/textAnswerStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
-        android:inputType="numberDecimal|numberSigned"
+        android:text="@string/pay_up_amount"
         app:layout_constraintBottom_toTopOf="@+id/next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/question"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/next"
@@ -42,11 +26,11 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="136dp"
-        android:text="@string/next"
+        android:text="@string/finish"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/service_cost_entry" />
+        app:layout_constraintTop_toBottomOf="@+id/total" />
 
 </android.support.constraint.ConstraintLayout>
