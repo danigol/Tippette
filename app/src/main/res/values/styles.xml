@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/moneyGreen</item>
         <item name="colorPrimaryDark">@color/moneyGreen</item>
         <item name="colorAccent">@color/teal</item>
+        <item name="android:background">@color/darkGray</item>
     </style>
 
     <style name="questionStyle">
