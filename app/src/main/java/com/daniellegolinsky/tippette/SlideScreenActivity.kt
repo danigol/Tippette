@@ -6,8 +6,10 @@ import android.support.v4.app.FragmentActivity
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
 import android.support.v4.view.ViewPager
+import com.daniellegolinsky.tippette.totalPage.TotalPageFragment
+import com.daniellegolinsky.tippette.utilities.ZoomOutPageTransformer
 
-private const val NUM_PAGES = 5
+private const val NUM_PAGES = 4
 
 class SlideScreenActivity : FragmentActivity() {
 
@@ -37,6 +39,6 @@ class SlideScreenActivity : FragmentActivity() {
     // Pager adapter for the slide screen pager view
     private inner class SlideScreenPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
         override fun getCount(): Int = NUM_PAGES
-        override fun getItem(position: Int): Fragment = TipPageFragment()
+        override fun getItem(position: Int): Fragment = TotalPageFragment()
     }
 }

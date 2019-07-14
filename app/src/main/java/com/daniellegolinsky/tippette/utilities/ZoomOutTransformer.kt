@@ -1,4 +1,4 @@
-package com.daniellegolinsky.tippette
+package com.daniellegolinsky.tippette.utilities
 
 import android.support.v4.view.ViewPager
 import android.view.View
