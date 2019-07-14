@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import com.daniellegolinsky.tippette.R
 import com.daniellegolinsky.tippette.SlideScreenActivity
 import com.daniellegolinsky.tippette.TipModel
@@ -31,9 +32,22 @@ class TotalPageFragment: Fragment() {
     }
 
     private fun onNextClicked() {
-        TipModel.total = totalAmount.text.toString().toDouble()
-        TipModel.getNextPage()
-        (activity as SlideScreenActivity).onNext()
+        if (totalAmount.text != null && totalAmount.text.toString().isNotEmpty()) {
+            TipModel.total = totalAmount.text.toString().toDouble()
+            if (TipModel.total > 0) {
+                TipModel.getNextPage()
+                (activity as SlideScreenActivity).onNext()
+            }
+            else {
+                toastError()
+            }
+        }
+        else {
+            toastError()
+        }
     }
 
+    private fun toastError() {
+        Toast.makeText(activity, R.string.total_error, Toast.LENGTH_SHORT).show()
+    }
 }

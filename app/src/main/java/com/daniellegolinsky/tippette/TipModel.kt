@@ -17,6 +17,13 @@ object TipModel {
     }
 
     fun generateTotal() : Double {
-        return (total * service.value()) / peoplePaying
+        return ((total * service.value()) + total) / peoplePaying
+    }
+
+    fun reset() {
+        currentPage = 0
+        total = 0.0
+        peoplePaying = 1
+        service = ServiceQuality.OK
     }
 }

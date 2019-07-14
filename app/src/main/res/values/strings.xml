@@ -5,7 +5,7 @@
     <string name="total_question">What was the total?</string>
     <string name="people_paying_question">How many people are paying?</string>
     <string name="service_quality_question">How was the service?</string>
-    <string name="pay_up_amount">You should pay\n%1$s%2$d</string>
+    <string name="pay_up_amount">You should pay\n%1$s%2$.2f</string>
 
     <!-- Service Quality Labels -->
     <string name="service_quality_label_1">Worst Ever!</string>
@@ -21,4 +21,5 @@
     <!--Other Strings -->
     <string name="total_tooltip">The total amount for the meal, with tax.</string>
     <string name="currency_symbol">$</string>
+    <string name="total_error">Please provide a check total greater than 0.</string>
 </resources>
