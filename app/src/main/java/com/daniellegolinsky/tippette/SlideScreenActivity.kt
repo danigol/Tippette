@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
+import android.view.WindowManager
 import com.daniellegolinsky.tippette.finalPage.FinalPageFragment
 import com.daniellegolinsky.tippette.peoplePage.PeoplePageFragment
 import com.daniellegolinsky.tippette.servicePage.ServicePageFragment
@@ -24,12 +25,12 @@ class SlideScreenActivity : FragmentActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_pay_up)
-
         pager = findViewById(R.id.pager)
         val pagerAdapter = SlideScreenPagerAdapter(supportFragmentManager)
         pager.adapter = pagerAdapter
         pager.setPageTransformer(true, ZoomOutPageTransformer())
         finalPageFragment = FinalPageFragment()
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
     }
 
     override fun onBackPressed() {
