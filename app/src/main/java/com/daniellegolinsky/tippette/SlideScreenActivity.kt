@@ -12,13 +12,14 @@ import com.daniellegolinsky.tippette.peoplePage.PeoplePageFragment
 import com.daniellegolinsky.tippette.servicePage.ServicePageFragment
 import com.daniellegolinsky.tippette.totalPage.TotalPageFragment
 import com.daniellegolinsky.tippette.utilities.ServiceQuality
+import com.daniellegolinsky.tippette.utilities.TipViewPager
 import com.daniellegolinsky.tippette.utilities.ZoomOutPageTransformer
 
 private const val NUM_PAGES = 4
 
 class SlideScreenActivity : FragmentActivity() {
 
-    private lateinit var pager: ViewPager
+    private lateinit var pager: TipViewPager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
