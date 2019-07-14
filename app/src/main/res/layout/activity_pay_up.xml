@@ -7,7 +7,7 @@
     android:background="@color/darkGray"
     tools:context="com.daniellegolinsky.tippette.SlideScreenActivity">
 
-    <android.support.v4.view.ViewPager
+    <com.daniellegolinsky.tippette.utilities.TipViewPager
         android:id="@+id/pager"
         android:background="@color/darkGray"
         android:layout_width="match_parent"

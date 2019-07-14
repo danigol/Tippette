@@ -2,6 +2,8 @@ package com.daniellegolinsky.tippette.utilities
 
 import android.support.v4.view.ViewPager
 import android.view.View
+import kotlin.math.abs
+import kotlin.math.max
 
 // From Google Developers page on pageer view animations
 // https://developer.android.com/training/animation/screen-slide
@@ -22,7 +24,7 @@ class ZoomOutPageTransformer : ViewPager.PageTransformer {
                 }
                 position <= 1 -> { // [-1,1]
                     // Modify the default slide transition to shrink the page as well
-                    val scaleFactor = Math.max(MIN_SCALE, 1 - Math.abs(position))
+                    val scaleFactor = max(MIN_SCALE, 1 - abs(position))
                     val vertMargin = pageHeight * (1 - scaleFactor) / 2
                     val horzMargin = pageWidth * (1 - scaleFactor) / 2
                     translationX = if (position < 0) {
