@@ -3,18 +3,45 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/moneyGreen</item>
+        <item name="colorPrimaryDark">@color/moneyGreen</item>
+        <item name="colorAccent">@color/teal</item>
+        <item name="android:background">@color/darkGray</item>
     </style>
 
     <style name="questionStyle">
-        <item name="android:textColor">@color/darkGray</item>
+        <item name="android:textColor">@color/white</item>
         <item name="android:textSize">32sp</item>
         <item name="android:textAlignment">center</item>
         <item name="android:layout_marginStart">16dp</item>
         <item name="android:layout_marginTop">96dp</item>
         <item name="android:layout_marginEnd">16dp</item>
+    </style>
+
+    <style name="peopleValueStyle">
+        <item name="android:textColor">@color/teal</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">96dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
+
+    <style name="textAnswerStyle">
+        <item name="android:textColor">@color/moneyGreen</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginTop">96dp</item>
+        <item name="android:backgroundTint">@color/moneyGreen</item>
+    </style>
+
+    <style name="nextButtonStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:background">@drawable/rounded_button</item>
     </style>
 
 </resources>

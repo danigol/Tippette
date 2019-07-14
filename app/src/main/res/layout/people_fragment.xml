@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/darkGray">
 
@@ -11,28 +12,44 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/total_question"
-        app:layout_constraintBottom_toTopOf="@+id/service_cost_entry"
+        android:text="@string/people_paying_question"
+        app:layout_constraintBottom_toTopOf="@+id/people_slider_value"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26999998" />
 
-    <EditText
-        android:id="@+id/service_cost_entry"
-        style="@style/textAnswerStyle"
+    <TextView
+        android:id="@+id/people_slider_value"
+        style="@style/peopleValueStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/people_slider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question" />
+
+    <SeekBar
+        android:id="@+id/people_slider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
-        android:inputType="numberDecimal|numberSigned"
+        android:progressBackgroundTint="@color/white"
+        android:min="1"
+        android:max="10"
+        android:progress="1"
         app:layout_constraintBottom_toTopOf="@+id/next"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/question"/>
+        app:layout_constraintTop_toBottomOf="@+id/people_slider_value" />
 
     <Button
         android:id="@+id/next"
@@ -41,12 +58,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="136dp"
+        android:layout_marginBottom="176dp"
         android:text="@string/next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/service_cost_entry" />
+        app:layout_constraintTop_toBottomOf="@+id/people_slider" />
 
 </android.support.constraint.ConstraintLayout>
