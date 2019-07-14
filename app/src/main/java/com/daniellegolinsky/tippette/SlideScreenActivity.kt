@@ -1,11 +1,13 @@
 package com.daniellegolinsky.tippette
 
+import android.app.Activity
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
 import android.view.WindowManager
+import android.view.inputmethod.InputMethodManager
 import com.daniellegolinsky.tippette.finalPage.FinalPageFragment
 import com.daniellegolinsky.tippette.peoplePage.PeoplePageFragment
 import com.daniellegolinsky.tippette.servicePage.ServicePageFragment
@@ -30,7 +32,7 @@ class SlideScreenActivity : FragmentActivity() {
         pager.adapter = pagerAdapter
         pager.setPageTransformer(true, ZoomOutPageTransformer())
         finalPageFragment = FinalPageFragment()
-        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN)
     }
 
     override fun onBackPressed() {
@@ -53,6 +55,12 @@ class SlideScreenActivity : FragmentActivity() {
 
     fun updateFinalPage() {
         finalPageFragment.refresh()
+    }
+
+    fun hideSoftKeyboard() {
+        var inputMethodManager: InputMethodManager = (getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager)
+        inputMethodManager.hideSoftInputFromWindow(
+                currentFocus.windowToken, 0)
     }
 
     // Pager adapter for the slide screen pager view
