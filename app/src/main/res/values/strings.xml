@@ -5,7 +5,7 @@
     <string name="total_question">What was the total?</string>
     <string name="people_paying_question">How many people are paying?</string>
     <string name="service_quality_question">How was the service?</string>
-    <string name="pay_up_amount">You should pay\n%1$s%2$.2f</string>
+    <string name="pay_up_amount">You should pay\n%1$s%2$.2f\nThat\'s %3$s%4$.2f plus %5$s%6$.2f tip.</string>
 
     <!-- Service Quality Labels -->
     <string name="service_quality_label_1">Worst Ever!</string>

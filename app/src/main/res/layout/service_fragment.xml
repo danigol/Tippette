@@ -45,6 +45,7 @@
         android:max="4"
         android:progress="2"
         android:progressBackgroundTint="@color/white"
+        style="@style/sliderStyle"
         app:layout_constraintBottom_toTopOf="@+id/next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
