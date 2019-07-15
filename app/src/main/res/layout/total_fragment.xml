@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/darkGray">
+    android:background="@drawable/background_gradient">
 
     <TextView
         android:id="@+id/question"
@@ -29,8 +29,9 @@
         android:layout_marginBottom="8dp"
         android:inputType="numberDecimal|numberSigned"
         android:imeOptions="actionSend"
-        android:digits="0123456789,."
+        android:digits="0123456789."
         android:maxLength="8"
+        android:focusable="true"
         app:layout_constraintBottom_toTopOf="@+id/next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
