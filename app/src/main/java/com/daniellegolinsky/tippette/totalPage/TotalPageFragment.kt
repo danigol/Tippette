@@ -18,6 +18,8 @@ class TotalPageFragment : Fragment() {
     lateinit var nextButton: Button
     lateinit var totalAmount: EditText
 
+    var hideKeyboard: Boolean = false
+
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -31,17 +33,23 @@ class TotalPageFragment : Fragment() {
         totalAmount.setOnEditorActionListener { _, actionId, _ ->
             return@setOnEditorActionListener when (actionId) {
                 EditorInfo.IME_ACTION_SEND -> {
-                    (activity as SlideScreenActivity).hideSoftKeyboard()
                     onNextClicked()
                     true
                 }
                 else -> false
             }
         }
+
+        hideKeyboard = totalAmount.requestFocus()
+        totalAmount.setOnFocusChangeListener { _, hasFocus ->  hideKeyboard = hasFocus }
+
         return view
     }
 
     private fun onNextClicked() {
+        if (hideKeyboard) {
+            (activity as SlideScreenActivity).hideSoftKeyboard()
+        }
         if (totalAmount.text != null && totalAmount.text.toString().isNotEmpty()) {
             TipModel.total = totalAmount.text.toString().toDouble()
             if (TipModel.total > 0) {
