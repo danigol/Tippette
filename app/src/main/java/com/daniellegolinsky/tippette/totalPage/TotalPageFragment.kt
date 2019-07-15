@@ -39,7 +39,6 @@ class TotalPageFragment : Fragment() {
                 else -> false
             }
         }
-
         hideKeyboard = totalAmount.requestFocus()
         totalAmount.setOnFocusChangeListener { _, hasFocus ->  hideKeyboard = hasFocus }
 
