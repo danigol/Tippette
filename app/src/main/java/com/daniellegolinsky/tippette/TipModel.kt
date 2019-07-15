@@ -20,6 +20,14 @@ object TipModel {
         return ((total * service.value()) + total) / peoplePaying
     }
 
+    fun generateTotalMinusTip(): Double {
+        return total / peoplePaying
+    }
+
+    fun generateTip(): Double {
+        return (total * service.value()) / peoplePaying
+    }
+
     fun reset() {
         currentPage = 0
         total = 0.0

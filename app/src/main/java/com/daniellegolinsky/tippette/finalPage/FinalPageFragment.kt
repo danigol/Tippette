@@ -22,10 +22,7 @@ class FinalPageFragment : Fragment() {
             savedInstanceState: Bundle?): View {
         val view: View = inflater.inflate(R.layout.pay_up_fragment, container, false)
         finalValue = view.findViewById(R.id.total)
-        finalValue.text = getString(
-                            R.string.pay_up_amount,
-                            getString(R.string.currency_symbol),
-                            TipModel.generateTotal())
+        finalValue.text = tipString()
 
         nextButton = view.findViewById(R.id.next)
         nextButton.setOnClickListener{ onNextClicked() }
@@ -34,15 +31,23 @@ class FinalPageFragment : Fragment() {
     }
 
     fun refresh() {
-        finalValue.text = getString(
-                R.string.pay_up_amount,
-                getString(R.string.currency_symbol),
-                TipModel.generateTotal())
+        finalValue.text = tipString()
     }
 
     private fun onNextClicked() {
         TipModel.reset()
         TipModel.getNextPage()
         (activity as SlideScreenActivity).onNext()
+    }
+
+    private fun tipString(): String {
+        return getString(
+                R.string.pay_up_amount,
+                getString(R.string.currency_symbol),
+                TipModel.generateTotal(),
+                getString(R.string.currency_symbol),
+                TipModel.generateTotalMinusTip(),
+                getString(R.string.currency_symbol),
+                TipModel.generateTip())
     }
 }
