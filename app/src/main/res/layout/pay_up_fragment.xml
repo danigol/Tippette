@@ -22,7 +22,6 @@
     <Button
         android:id="@+id/next"
         style="@style/nextButtonStyle"
-        android:layout_width="300sp"
         android:layout_height="wrap_content"
         android:text="@string/finish"
         app:layout_constraintBottom_toBottomOf="parent"
