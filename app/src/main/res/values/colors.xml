@@ -6,9 +6,11 @@
 
     <!-- Text -->
     <color name="darkGray">#111111</color>
+    <color name="gray">#444444</color>
     <color name="pureBlue">#0000FF</color>
     <color name="moneyGreen">#008811</color>
     <color name="darkGreen">#003300</color>
     <color name="teal">#00BBDD</color>
     <color name="white">#FFFFFF</color>
+    <color name="nearly_white">#EFEFEE</color>
 </resources>
