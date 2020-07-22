@@ -1,7 +1,7 @@
 package com.daniellegolinsky.tippette.servicePage
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,7 +13,7 @@ import com.daniellegolinsky.tippette.SlideScreenActivity
 import com.daniellegolinsky.tippette.TipModel
 import com.daniellegolinsky.tippette.utilities.ServiceQuality
 
-class ServicePageFragment : Fragment() {
+class ServicePageFragment : androidx.fragment.app.Fragment() {
 
     lateinit var serviceSlider: SeekBar
     lateinit var serviceText: TextView

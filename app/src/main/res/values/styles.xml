@@ -1,16 +1,17 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/moneyGreen</item>
         <item name="colorPrimaryDark">@color/moneyGreen</item>
         <item name="colorAccent">@color/teal</item>
-        <item name="android:background">@color/nearly_white</item>
+        <item name="background">@color/nearly_white</item>
+        <item name="android:forceDarkAllowed">true</item>
     </style>
 
     <style name="pageBackground">
-        <item name="background">@color/nearly_white</item>
+        <item name="background">@android:id/background</item>
     </style>
 
     <style name="questionStyle">
